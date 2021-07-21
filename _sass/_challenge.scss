@@ -1,0 +1,249 @@
+// CREDIT: https://github.com/carpentries/lesson-example/blob/gh-pages/assets/css/lesson.scss
+
+// code boxes
+$color-error:       #bd2c00 !default;
+$color-warning:     #cda01d !default;
+$color-output:      #303030 !default;
+$color-source:      #360084 !default;
+
+// blockquotes
+$color-starter:    #ded4b9 !default;
+$color-hint:       #cdc7be !default;
+
+//----------------------------------------
+// Specialized code blocks.
+//----------------------------------------
+
+@mixin cdSetup($color) {
+    color: $color;
+    border: solid 1px $color;
+    border-left: solid 5px $color;
+    margin: 15px 5px 10px 0;
+    border-radius: 4px 0 0 4px;
+}
+
+// Generic setup. Has to come before .error, .warning, and .output
+div[class^='language-'] { @include cdSetup($color-source); }
+
+div.source::before,
+div[class^='language-']::before {
+  background-color: #f2eff6;
+  display: block;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+div[class^='language-']::before,
+div.source::before { content: "Code"; }
+
+div.language-bash::before   { content: "Bash"; }
+div.language-html::before   { content: "HTML"; }
+div.language-css::before    { content: "CSS"; }
+div.language-js::before    { content: "JavaScript"; }
+div.language-python::before { content: "Python"; }
+
+// ------ challenge body ------
+section img {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  margin: 40px 0 16px;
+  border-bottom: solid 1px #eaecef;
+  padding-bottom: 0.3em;
+  line-height: 1.25;
+}
+
+section h3 { margin: 30px 0 14px; }
+
+section pre {
+  margin: 0;
+  border: 0;
+}
+
+$codeblock-padding: 5px !default;
+
+@mixin bkSetup($color, $glyph) {
+
+  $gradientcolor1: $color;
+  $gradientcolor2: scale-color($color, $lightness: 10%);
+
+  padding: 0 0 $codeblock-padding $codeblock-padding;
+  border: 1px solid;
+  border-color: $color;
+  border-radius: 4px;
+
+  margin: 15px 5px 10px 0;
+
+  h2 {
+    padding-top: $codeblock-padding;
+    padding-bottom: $codeblock-padding;
+    font-size: 20px;
+    background: linear-gradient(to bottom, $gradientcolor1, $gradientcolor2);
+    border-color: $color;
+    margin-top: 0px;
+    margin-left: -$codeblock-padding; // to move back to the left margin of the enclosing blockquote
+  }
+  h2:before {
+    font-family: 'boxicons'!important;
+    content: $glyph;
+    padding-left: $codeblock-padding;
+    padding-right: $codeblock-padding;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.starter{ @include bkSetup($color-starter, "\ea92"); }
+.hint { @include bkSetup($color-hint, "\ed8d"); }
+
+.starter h3, .hint h3 {
+  font-size: 18px;
+}
+.starter { background-color: #ded4b94d; }
+.hint { background-color: #cdc7be40; }
+
+blockquote p {
+  margin: 5px;
+}
+blockquote :not(h2) + p {
+  padding-top: 1em;
+}
+
+// Override Bootstrap settings.
+blockquote { font-size: inherit; }
+a code {
+  color: #006cad;
+}
+a:link {
+  color: #196EBD;
+}
+a:active, a:hover {
+  outline: 0;
+  text-decoration: underline;
+}
+a:visited {
+  color: #1AA4DA;
+}
+code {
+  white-space: nowrap;
+  padding: 2px 5px;
+  color: #24292e;
+  background-color: #e7e7e7;
+}
+
+// starter
+.starter, .hint {
+  h2 {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:before {
+      font-family: 'boxicons'!important;
+      content: "\ea92";
+      float: left;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
+    }
+    span.fold-unfold {
+      margin-left: 1em;
+      opacity: 0.5;
+    }
+    .icon {
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      font-family: "boxicons"!important;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+    }
+    .icon-collapse-down::before {
+      content: '\ece8';
+    }
+    .icon-collapse-up::before {
+      content: '\ee30';
+    }
+  }
+}
+
+pre {
+  padding: 10px;
+}
+
+.challenge-navbar {
+  display: flex;
+  justify-content: space-between;
+
+  // .text-left, .text-right {
+  //   margin-top: 0;
+  //   margin-bottom: 20px;
+  // }
+
+  .text-left a {
+    margin-left: -10px;
+  }
+}
+.challenge-content {
+  .challenge-header {
+    img {
+      border-radius: 6px;
+    }
+    .nav-link {
+      background-color: #ded4b9;
+      padding: 0.125rem 1.5rem;
+      color: #111;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+    .nav-link.active {
+      background-color: #666;
+      color: #fff;
+    }
+
+    .info-wrapper {
+      padding-left: 1rem;
+    }
+    .challenge-info-header {
+      display: flex;
+      justify-content: space-between;
+
+      .tag-badge {
+        display: inline-block;
+        color: #fff;
+        background-color: #777;
+        padding: 0.125rem 1rem;
+        border-radius: 5px;
+        text-transform: uppercase;
+      }
+      .difficulty-badge {
+        display: inline-block;
+        color: #666;
+        border: 1px solid #777;
+        padding: 0.125rem 1rem;
+        border-radius: 5px;
+        text-transform: uppercase
+      }
+    }
+    .challenge-info-body {
+      h2 {
+        border-bottom: 0;
+        color: #555;
+        font-weight: 500;
+      }
+    }
+
+  }
+  .challenge-body {
+    width: 95%;
+    margin: auto;
+    margin-top: 3rem;
+  }
+}
+

@@ -1,0 +1,50 @@
+---
+layout: default
+title: Home
+page_name: home
+---
+
+<section class="challenges pt-5">
+  <div class="container">
+    <div class="section-header">
+      <h1>
+        Projects
+      </h1>
+      <div class="action">
+        <a href="#">View All</a>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for challenge in site.html-css %}
+        <div class="col-md-4">
+          <div class="card">
+            <div class="image-wrapper">
+              <a href="{{ challenge.url }}">
+                <img src="{{ site.image_base_url }}/{{ challenge.preview.desktop }}" class="card-img-top" alt="...">
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ challenge.title }}</h5>
+              <p class="card-text">
+                {{ challenge.description }}
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="challenge-info-header">
+                <div class="tags">
+                  {% for tag in challenge.tags %}
+                    <span class="tag-badge">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+                <div class="difficulty-badge">
+                  {{ challenge.difficulty }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

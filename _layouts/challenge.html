@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<section class="challenge-page">
+  <div class="container">
+    {% include challenge/episode_navbar.html %}
+
+    <section class="challenge-content">
+      <div class="row challenge-header mb-4">
+        <div class="col-md-6">
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <img src="{{ site.image_base_url }}/{{ page.preview.desktop }}" alt="Challenge Desktop Preview">
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <img src="{{ site.image_base_url }}/{{ page.preview.mobile }}" alt="Challenge Mobile Preview">
+            </div>
+          </div>
+          <ul class="nav nav-pills mt-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                aria-controls="pills-home" aria-selected="true">Desktop</a>
+            </li>
+            <li class="nav-item ml-3" role="presentation">
+              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                aria-controls="pills-profile" aria-selected="false">Mobile</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="info-wrapper">
+            <div class="challenge-info-header">
+              <div class="tags">
+                {% for tag in page.tags %}
+                  <span class="tag-badge">{{ tag }}</span>
+                {% endfor %}
+              </div>
+              <div class="difficulty-badge">
+                {{ page.difficulty }}
+              </div>
+            </div>
+            <div class="challenge-info-body">
+              <h2>{{ page.title }}</h2>
+              <p>
+                {{ page.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="challenge-body">
+        {{content}}
+      </div>
+    </section>
+
+    {% include challenge/episode_navbar.html %}
+  </div>
+</section>
