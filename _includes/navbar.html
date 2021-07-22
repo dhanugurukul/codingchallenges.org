@@ -16,7 +16,7 @@
           <a class="nav-link" href="/">Home</a>
         </li>
 
-        <div class="dropdown nav-item">
+        <div class="dropdown nav-item{% if page.layout == 'challenge' or page.page_name == 'challenges' %} active{% endif %}">
           <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Challenges
           </a>
@@ -26,7 +26,7 @@
           </div>
         </div>
 
-        <li class="nav-item">
+        <li class="nav-item{% if page.page_name == 'license' %} active{% endif %}">
           <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}/license/">License</a>
         </li>
 
