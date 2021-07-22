@@ -25,3 +25,7 @@ This is adapted from: https://ricostacruz.com/til/relative-paths-in-jekyll
 {% elsif depth == 3 %}{% assign relative_root_path = '../..' %}
 {% elsif depth == 4 %}{% assign relative_root_path = '../../..' %}
 {% endif %}
+
+{% assign path_tokens = page.url | split: '/' %}
+<!-- NOTE: Assumption that there is only one level  -->
+{% assign challenge_root_path = path_tokens[1] %}
