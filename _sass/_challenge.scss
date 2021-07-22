@@ -202,6 +202,26 @@ pre {
       color: #fff;
     }
 
+    .info-wrapper {
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+
+      .project-editable {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        background-color: #555;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+
+        a {
+          font-size: 13px;
+          color: #fff;
+        }
+      }
+    }
+
     .challenge-info-header {
       display: flex;
       justify-content: space-between;

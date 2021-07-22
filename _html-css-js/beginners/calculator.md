@@ -27,7 +27,7 @@ Your users should be able to:
 
 ## Prerequisites
 
-You should have the basic knowledge of HTML and CSS to complete this challenge.
+You should have the basic knowledge of HTML, CSS and JS to complete this challenge.
 
 
 ## Starter Code
