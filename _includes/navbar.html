@@ -2,6 +2,7 @@
 <nav class="navbar fixed-top shadow-sm navbar-expand-lg">
   <div class="container">
     <a href="/" class="brand">
+      <img src="{{ site.image_base_url }}/logo.png" alt="Logo">
       <span>{{ site.html_title }}</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,6 +15,16 @@
         <li class="nav-item{% if page.page_name == 'home' %} active{% endif %}">
           <a class="nav-link" href="/">Home</a>
         </li>
+
+        <div class="dropdown nav-item">
+          <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Challenges
+          </a>
+
+          <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="{{ site.url }}/html-css-js/">HTML, CSS & JS</a>
+          </div>
+        </div>
 
         <li class="nav-item">
           <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}/license/">License</a>
