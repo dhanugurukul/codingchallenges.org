@@ -1,6 +1,7 @@
 title: Coding Challenges
 html_title: >-
   <span class="blue">Coding</span><span class="red">Challenges</span>&nbsp;
+year: 2021
 email: brg@brgurukul.org
 description: >- # this means to ignore newlines until "baseurl:"
   Coding challenges related to programming, frameworks and others
@@ -18,9 +19,9 @@ google_analytics: # your google analytics id
 permalink: /:title
 
 collections:
-  html-css:
+  html-css-js:
     output: true
-    permalink: /html-css/:title
+    permalink: /html-css-js/:title
 
 contacts:
   facebook:

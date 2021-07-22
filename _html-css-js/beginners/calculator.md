@@ -1,12 +1,14 @@
 ---
 layout: challenge
-title: Calculator UI
+title: Calculator App
 description: >-
-  This calculator UI challenge will test your HTML and CSS skills.
+  This Calculator App challenge will test your HTML, CSS and JS skills.
 date: 2021-07-21 01:01:01 +0530
 tags:
-  - html-css
-difficulty: novice
+  - html
+  - css
+  - js
+difficulty: intermediate
 preview:
   desktop: calculator/desktop.jpg
   mobile: calculator/mobile.jpg

@@ -12,25 +12,3 @@
     text-align: center;
   }
 }
-
-// standard mobile size
-@media (max-width: 500px) {
-  header .navbar .brand {
-    font-size: 1.2rem;
-
-    img {
-      height: 35px;
-    }
-  }
-  .embed-img {
-    width: 100%;
-    height: auto;
-  }
-  .footer-section .row .col-12 {
-    margin-bottom: 0.5rem;
-  }
-}
-
-// small size mobile
-@media(max-width: 360px) {
-}

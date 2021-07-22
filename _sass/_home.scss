@@ -38,12 +38,14 @@ header {
   }
 }
 
-.challenges {
+.challenges-section {
   .section-header {
     display: flex;
     justify-content: space-between;
   }
   .card {
+    border: 0;
+
     .image-wrapper {
       max-width: 100%;
       overflow: hidden;
@@ -52,37 +54,54 @@ header {
         margin-bottom: 0;
         width: 100%;
         transition: transform 0.3s ease 0s;
+        border-radius: 10px;
       }
       img:hover {
         transform: scale(1.1);
       }
     }
-    .card-title {
-      color: #333;
-    }
-    .card-text {
-      color: #555;
-    }
-    .challenge-info-header {
-      display: flex;
-      justify-content: space-between;
+    .card-body {
+      padding: 1.25rem 0;
 
-      .tag-badge {
-        display: inline-block;
-        color: #fff;
-        background-color: #777;
-        padding: 0.125rem 1rem;
-        border-radius: 5px;
-        text-transform: uppercase;
+      .card-title {
+        color: #333;
       }
-      .difficulty-badge {
-        display: inline-block;
-        color: #666;
-        border: 1px solid #777;
-        padding: 0.125rem 1rem;
-        border-radius: 5px;
-        text-transform: uppercase
+      .card-text {
+        color: #555;
       }
+      .challenge-info-header {
+        display: flex;
+        justify-content: space-between;
+
+        .tag-badge, .difficulty-badge {
+          color: #fff;
+          font-size: 11px;
+          background-color: #777;
+          padding: 0.25rem 0.5rem;
+          border-radius: 5px;
+          text-transform: uppercase;
+        }
+        .difficulty-badge {
+          color: blue;
+          background-color: #fff;
+          border: 1px solid #777;
+        }
+      }
+
     }
+
+  }
+}
+
+@media (max-width: 500px) {
+  header .navbar .brand {
+    font-size: 1.2rem;
+
+    img {
+      height: 35px;
+    }
+  }
+  .section-header h1 {
+    font-size: 2rem;
   }
 }

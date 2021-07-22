@@ -181,11 +181,6 @@ pre {
   display: flex;
   justify-content: space-between;
 
-  // .text-left, .text-right {
-  //   margin-top: 0;
-  //   margin-bottom: 20px;
-  // }
-
   .text-left a {
     margin-left: -10px;
   }
@@ -207,9 +202,6 @@ pre {
       color: #fff;
     }
 
-    .info-wrapper {
-      padding-left: 1rem;
-    }
     .challenge-info-header {
       display: flex;
       justify-content: space-between;
@@ -247,3 +239,12 @@ pre {
   }
 }
 
+@media (max-width: 500px) {
+  .challenge-page {
+    .challenge-content {
+      .challenge-header .info-wrapper {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
