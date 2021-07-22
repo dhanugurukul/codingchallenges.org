@@ -36,9 +36,6 @@ a, a:hover {
 .page-margin {
   margin-top: 70px;
 }
-.non-milestone-page {
-  padding: 4rem 0;
-}
 
 #page-content {
   flex: 1 0 auto;
@@ -109,16 +106,6 @@ pre {
   }
 }
 
-// override lesson css
-table.output {
-  margin-bottom: 0;
-
-  td {
-    padding: 0.25rem 1rem;
-    border: 1px solid #aaa;
-    color: #555;
-  }
-}
 
 @import "syntax-highlighting";
 @import "challenge";
