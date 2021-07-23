@@ -250,6 +250,9 @@ pre {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 0.6rem;
   background-color: #555;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -269,6 +272,9 @@ pre {
     }
     .challenge-body, .project-editable {
       width: 98%;
+    }
+    .project-editable  .issue {
+      margin: auto;
     }
   }
 }

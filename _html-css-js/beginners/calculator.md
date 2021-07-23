@@ -1,8 +1,8 @@
 ---
 layout: challenge
-title: Calculator App
+title: Simple Calculator
 description: >-
-  This Calculator App challenge will test your HTML, CSS and JS skills.
+  This Simple Calculator App challenge will test your HTML, CSS and JS skills.
 date: 2021-07-21 01:01:01 +0530
 tags:
   - html
@@ -12,18 +12,24 @@ difficulty: intermediate
 preview:
   desktop: calculator/desktop.jpg
   mobile: calculator/mobile.jpg
+solution: html-css-js/simple-calculator-v1
 ---
 
 ## Brief
 
-Your challenge is to build this _Calender UI_ and get it looking as close to the design as possible.
+Your challenge is to build this _Simple Calculator App_ and should meet following requirements:
+
+- The design should at least look like presented in the preview.
+- The app should be viewable in mobile and desktop screens.
+- Able to perform calculation given in the app.
+- Button hover states should feel like interactive elements.
 
 You can use any tools you like to complete the challenge.
 
-Your users should be able to:
+The design of the challenge is kept minimal. You can build your optimized version.
 
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
+__NOTE:__ It is highly recommended to first go through the challenge by yourself before checking
+the solution.
 
 ## Prerequisites
 
