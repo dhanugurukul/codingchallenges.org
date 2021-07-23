@@ -206,20 +206,6 @@ pre {
       height: 90%;
       display: flex;
       flex-direction: column;
-
-      .project-editable {
-        margin-top: auto;
-        display: flex;
-        justify-content: space-between;
-        background-color: #555;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-
-        a {
-          font-size: 13px;
-          color: #fff;
-        }
-      }
     }
 
     .challenge-info-header {
@@ -258,6 +244,21 @@ pre {
     margin-top: 3rem;
   }
 }
+.project-editable {
+  width: 95%;
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #555;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+
+  a {
+    font-size: 13px;
+    color: #fff;
+  }
+}
 
 @media (max-width: 500px) {
   .challenge-page {
@@ -265,6 +266,9 @@ pre {
       .challenge-header .info-wrapper {
         margin-top: 1rem;
       }
+    }
+    .challenge-body, .project-editable {
+      width: 98%;
     }
   }
 }
