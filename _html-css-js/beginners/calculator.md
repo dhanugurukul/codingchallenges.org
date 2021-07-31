@@ -29,7 +29,7 @@ You can use any tools you like to complete the challenge.
 The design of the challenge is kept minimal. You can build your optimized version.
 
 __NOTE:__ It is highly recommended to first go through the challenge by yourself before checking
-the solution.
+the solution as it will help you gain more knowledge.
 
 ## Prerequisites
 
